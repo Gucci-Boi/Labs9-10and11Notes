@@ -1,12 +1,12 @@
 package Lab9Notes.movies;
 
 public class Movie {
-    //
+    // variables for the constructor
     private int id;
     private String name;
     private int stars;
     private boolean watched;
-    // constructor
+    // constructor for movie objects
     Movie(String name, int stars, boolean watched) {
         this.name = name;
         this.stars = stars;
@@ -19,14 +19,14 @@ public class Movie {
         this.stars = stars;
         this.watched = watched;
     }
-    @Override
+    @Override // replaces the default toString method with this custom one
     public String toString() {
+        // custom string
         return "ID: " + id + ", Movie name: " + name + ". It was rated " + stars + " stars. "
                 + "You watched this movie- " + watched;
     }
-    // getters and setters for the Movie constructor
+    // getters and setters for the Movie constructors
     public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
     public int getStars() { return stars; }
     public void setStars(int stars) { this.stars = stars; }
     public boolean isWatched() { return watched; }

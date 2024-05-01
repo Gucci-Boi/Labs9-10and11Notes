@@ -12,10 +12,10 @@ public class YelpSearch {
         String typeOfRestaurant = stringInput("What type of restaurant would you like to look for? ");
 
         Map<String, Object> yelpQuery = Map.of(
-                "term", "pizza", // type of restaurant
-                "location", "Minneapolis, MN", // place/area
+                "term", typeOfRestaurant,       // type of restaurant
+                "location", "Minneapolis, MN",  // place/area
                 "categories", "restaurants",
-                "price", "1");  // lowest price
+                "price", "1");              // lowest price
 
         YelpResponse response = Unirest.get(yelpURL)
                 .header("Authorization", "Bearer " + YELP_API_KEY)
